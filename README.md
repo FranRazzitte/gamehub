@@ -33,7 +33,7 @@
     2. Utilización de animaciones (css y/o typescript).
     3. Favicon de la aplicación.
 9. Listados de resultados.
-10.Presentación. Página “Quién soy”:
+10. Presentación. Página “Quién soy”:
     1. Datos personales del alumno.
     2. Imagen del alumno.
     3. Explicación del juego propio.
