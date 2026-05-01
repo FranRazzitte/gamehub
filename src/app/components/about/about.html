@@ -1,18 +1,37 @@
-<h2>Quién Soy</h2>
-
 @if (!loading() && usuario()) {
-  <div>
-    <img [src]="usuario()!.image" width="150" [alt]="usuario()!.name">
-    <p><strong>Nombre:</strong> {{ usuario()!.name }}</p>
-    <p><strong>Usuario:</strong> {{ usuario()!.username }}</p>
-    <p><strong>Bio:</strong> {{ usuario()!.bio }}</p>
+  <div class="d-flex justify-content-center align-items-center m-1 mt-3">
+    <div class="d-flex align-items-center card rounded-5 border p-5" style="flex-direction: row;">
+      <img [src]="usuario()!.image" class="rounded-circle img-github-user" width="150" height="150" [alt]="usuario()!.name">
+      <div class="p-2 ms-2">
+        <h3 class="mb-0">{{usuario()!.name}}</h3>
+        <small class="text-muted">@{{ usuario()!.username }}</small>
+        <p class="card text-center p-1 mt-1" style="max-width: 150px;">{{ usuario()!.bio }}</p>
+        <a href="{{ usuario()?.url }}" class="text-decoration-none">Ir a GitHub</a>
+      </div>
+    </div>
   </div>
 }
 
 @if (loading()) {
-  <p>Cargando datos del perfil...</p>
+  <div class="d-flex justify-content-center align-items-center m-5 placeholder-glow">
+    <div class="d-flex align-items-center card rounded-5 border p-5" style="flex-direction: row;">
+      <img src="https://whitescreen.dev/Uploads/images/Logo/black-screen-background.png" class="rounded-circle img-github-user placeholder" width="150" height="150" alt="img">
+      <div class="d-flex flex-column p-2 ms-2">
+        <h3 class="mb-1 placeholder me-4"></h3>
+        <small class="placeholder me-5"></small>
+        <p class="card text-center p-1 mt-1 placeholder" style="min-width: 150px;"></p>
+        <a href="https://github.com/" class="text-decoration-none">Ir a GitHub</a>
+      </div>
+    </div>
+  </div>
 }
 
 @if (error()) {
-  <p style="color: red;">{{ error() }}</p>
+  <div class="d-flex justify-content-center align-items-center m-5 placeholder-glow">
+    <div class="d-flex align-items-center card rounded-5 border p-5" style="flex-direction: row;">
+      <div class="d-flex flex-column p-2 ms-2">
+        <p class="mb-1 text-danger">{{ error() }}</p>
+      </div>
+    </div>
+  </div>
 }

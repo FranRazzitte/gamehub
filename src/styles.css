@@ -23,17 +23,17 @@ body {
   font-size: 0.95rem;
 }
 
-.loginPage .loginForm {
+.loginForm {
   min-width: 500px;
 }
 
 @media screen and (max-width: 600px) {
-  .loginPage {
+  .bodyPage {
     margin: 0 !important;
     padding: 20px !important;
   }
   
-  .loginPage .loginForm {
+  .loginForm {
     min-width: 100%;
     width: 100%;
     margin: 10px !important;

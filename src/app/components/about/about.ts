@@ -7,6 +7,7 @@ interface GitHubUser {
   name: string;
   username: string;
   bio: string;
+  url: string;
 }
 
 @Component({
@@ -34,7 +35,8 @@ export class About implements OnInit {
           image: apiUser.avatar_url,
           name: apiUser.name,
           username: apiUser.login,
-          bio: apiUser.bio
+          bio: apiUser.bio,
+          url: apiUser.html_url
         };
         
         this.usuario.set(transformed);
