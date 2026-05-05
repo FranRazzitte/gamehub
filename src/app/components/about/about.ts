@@ -18,7 +18,7 @@ interface GitHubUser {
 })
 
 export class About implements OnInit {
-  private apiUrl = 'https://api.github.com/users/FranRazzitte';
+  private apiUrl = 'https://api.github.com/users/franrazzitte';
   
   usuario = signal<GitHubUser | null>(null);
   loading = signal(false);
